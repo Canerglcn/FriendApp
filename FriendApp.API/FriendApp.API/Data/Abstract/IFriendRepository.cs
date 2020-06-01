@@ -1,4 +1,5 @@
-﻿using FriendApp.API.Models;
+﻿using FriendApp.API.Helpers;
+using FriendApp.API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace FriendApp.API.Data.Abstract
 
         Task<bool> SaveAll();
 
-        Task<IEnumerable<User>> GetUsers();
+        Task<PagedList<User>> GetUsers(UserParams userParams);
 
         Task<User> GetUser(int id);
 
